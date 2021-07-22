@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scripts/script.js"></script>
+    <link rel="stylesheet" type="text/css" href = "../style/bmrcalc.css">
+    <title>Caloric Balance</title>
+</head>
+<body>
+    <section class="calculator">
+        <h2>Count your Caloric Balance</h2>
+        <div class="ankieta">
+            <h5>About you</h5>
+
+            <div class="textinfo">
+
+                <label for="age">Age</label>
+                <input type="text" id="age" name="age">
+                <label for="height">Height</label>
+                <input type="text" id="height" name="height">
+                <label for="weight">Weight</label>
+                <input type="text" id="weight" name="weight">
+            </div>
+
+            <div class="chosesex">
+                
+                <input type="radio" name="sexname" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="sexname" id="female">
+                <label for="female">Female</label>
+            </div>
+<!--
+ACTIVITY
+
+            <div class="chooseact">
+                <label for="activity">Choose your activity</label>
+                <input type="radio" name="act" value="sedentary">sedentary
+                <input type="radio" name="act" value="light">light
+                <input type="radio" name="act" value="moderate">moderate
+                <input type="radio" name="act" value="very">very
+
+            </div>-->
+            <div class="submit">
+                <button type="submit" onclick="calcBMR();">
+                    Calculate
+                </button>
+                
+            <p class="scoreclass">
+                <input readonly id="score">
+            </p>
+            
+                
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
