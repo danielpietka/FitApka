@@ -12,7 +12,6 @@
     <section class="calculator">
         <h2>Count your Caloric Balance</h2>
         <div class="ankieta">
-            <h5>About you</h5>
 
             <div class="textinfo">
 
@@ -46,15 +45,21 @@ ACTIVITY
                 <button type="submit" onclick="calcBMR();">
                     Calculate
                 </button>
-                
+            <p class="brn">You burn</p>
             <p class="scoreclass">
                 <input readonly id="score">
             </p>
+            <p class="brn">kcal per day!</p>
             
                 
             </div>
 
         </div>
+        <div class="wrapp">
+            <input type="button" value="Back" onclick="history.back(-1)">
+            
+        </div>
     </section>
+    
 </body>
 </html>
