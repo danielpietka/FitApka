@@ -6,10 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../scripts/script.js"></script>
     <link rel="stylesheet" type="text/css" href = "../style/bmrcalc.css">
+    <link rel="stylesheet" type="text/css" href = "../style/style.css">
+    
     <title>Caloric Balance</title>
 </head>
 <body>
     <section class="calculator">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">BMI</a></li>
+                    <li><a href="">Food</a></li>
+                    <li><a href="">Training</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </div>
+        </nav>
         <h2>Count your Caloric Balance</h2>
         <div class="ankieta">
 
@@ -30,34 +43,21 @@
                 <input type="radio" name="sexname" id="female">
                 <label for="female">Female</label>
             </div>
-<!--
-ACTIVITY
-
-            <div class="chooseact">
-                <label for="activity">Choose your activity</label>
-                <input type="radio" name="act" value="sedentary">sedentary
-                <input type="radio" name="act" value="light">light
-                <input type="radio" name="act" value="moderate">moderate
-                <input type="radio" name="act" value="very">very
-
-            </div>-->
             <div class="submit">
                 <button type="submit" onclick="calcBMR();">
                     Calculate
                 </button>
+            </div>
+            <div>
             <p class="brn">You burn</p>
             <p class="scoreclass">
                 <input readonly id="score">
             </p>
-            <p class="brn">kcal per day!</p>
+            <p class="brnd">kcal per day!</p>
             
                 
             </div>
 
-        </div>
-        <div class="wrapp">
-            <input type="button" value="Back" onclick="history.back(-1)">
-            
         </div>
     </section>
     
