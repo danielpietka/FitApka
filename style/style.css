@@ -52,6 +52,7 @@ nav{
 }
 .text-box h1{
     font-size: 62px;
+    font-weight: 300;
     font-family: 'Pacifico', cursive;
     margin-bottom: 1px;
 }
@@ -89,7 +90,7 @@ p{
 .bmi-col{
     flex-basis: 31%;
     border-radius: 10px;
-    background: #f4fff3;
+    background: #e0fbde;
     margin-bottom: 5px;
     padding: 20px 12px;
     box-sizing: border-box;

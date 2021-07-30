@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="../scripts/countFood.js"></script>
+
+    <title>Count your food</title>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col">
+            <div class="card card-body">
+                <input type="text" id="searchInput" placeholder="Type name.." class="form-control"
+                    onkeyup="searchFun()">
+            </div>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-12 col-sm-6 col-md-8" id="list">
+            <h1>Food list</h1>
+            <table class="table table-striped" id="tableList">
+                <thead>
+                    <tr class="info">
+                        <th class="info" data-colname="name" data-order="desc">Name</th>
+                        <th data-colname="kcal" data-order="desc">Kcal/100g</th>
+                        <th data-colname="protein" data-order="desc">Protein</th>
+                        <th data-colname="carbs" data-order="desc">Carbs</th>
+                        <th data-colname="fat" data-order="desc">Fat</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tableBody">
+                    <tr id="sour4">
+                        <td id="name">Water</td>
+                        <td id="kcal">0</td>
+                        <td id="protein">0</td>
+                        <td id="carbs">0</td>
+                        <td id="fat">0</td>
+                    </tr>
+                    <tr id="sour4">
+                        <td id="name">Chicken</td>
+                        <td id="kcal">246</td>
+                        <td id="protein">30</td>
+                        <td id="carbs">1,8</td>
+                        <td id="fat">12</td>
+                    </tr>
+                    <tr id="sour4">
+                        <td id="name">Rice</td>
+                        <td id="kcal">130</td>
+                        <td id="protein">2,7</td>
+                        <td id="carbs">28</td>
+                        <td id="fat">0,3</td>
+                    </tr>
+                    <tr id="sour4">
+                        <td id="name">Sauce</td>
+                        <td id="kcal">78</td>
+                        <td id="protein">1</td>
+                        <td id="carbs">18</td>
+                        <td id="fat">1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-6 col-md-4" id="counter">
+            <h1>Count your food</h1>
+            <form method="POST" action=""></form>
+            <table class="table table-striped" id="tableCount">
+                <thead>
+                    <tr class="info">
+                        <th class="info" data-colname="name" data-order="desc">Name</th>
+                        <th data-colname="kcal" data-order="desc">Kcal/100g</th>
+                        <th data-colname="protein" data-order="desc">Protein</th>
+                        <th data-colname="carbs" data-order="desc">Carbs</th>
+                        <th data-colname="fat" data-order="desc">Fat</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+
+        </div>
+        
+    </div>
+
+
+    <h1>PODLICZANIE MAKRO, USUWANIE Z DRUGIEJ TABELI, KOLOROWANIE</h1> 
+
+</body>
+
+</html>
