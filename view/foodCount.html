@@ -10,93 +10,186 @@
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="../scripts/countFood.js"></script>
+    <script src="../scripts/countFood.js" async></script>
+    <link rel="stylesheet" type="text/css" href = "../style/foodCount.css">
 
     <title>Count your food</title>
 </head>
 
 <body>
+    <section class="foodCount-section">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">BMI</a></li>
+                    <li><a href="">Food</a></li>
+                    <li><a href="">Training</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    
 
     <div class="row">
         <div class="col">
             <div class="card card-body">
                 <input type="text" id="searchInput" placeholder="Type name.." class="form-control"
-                    onkeyup="searchFun()">
+                    onkeyup="searchFunElements()">
             </div>
         </div>
     </div>
-    <div class="row no-gutters">
-        <div class="col-12 col-sm-6 col-md-8" id="list">
-            <h1>Food list</h1>
-            <table class="table table-striped" id="tableList">
-                <thead>
-                    <tr class="info">
-                        <th class="info" data-colname="name" data-order="desc">Name</th>
-                        <th data-colname="kcal" data-order="desc">Kcal/100g</th>
-                        <th data-colname="protein" data-order="desc">Protein</th>
-                        <th data-colname="carbs" data-order="desc">Carbs</th>
-                        <th data-colname="fat" data-order="desc">Fat</th>
-                    </tr>
-                </thead>
+    
+    <div class="foodCards" id="foodCards">
 
-                <tbody id="tableBody">
-                    <tr id="sour4">
-                        <td id="name">Water</td>
-                        <td id="kcal">0</td>
-                        <td id="protein">0</td>
-                        <td id="carbs">0</td>
-                        <td id="fat">0</td>
-                    </tr>
-                    <tr id="sour4">
-                        <td id="name">Chicken</td>
-                        <td id="kcal">246</td>
-                        <td id="protein">30</td>
-                        <td id="carbs">1,8</td>
-                        <td id="fat">12</td>
-                    </tr>
-                    <tr id="sour4">
-                        <td id="name">Rice</td>
-                        <td id="kcal">130</td>
-                        <td id="protein">2,7</td>
-                        <td id="carbs">28</td>
-                        <td id="fat">0,3</td>
-                    </tr>
-                    <tr id="sour4">
-                        <td id="name">Sauce</td>
-                        <td id="kcal">78</td>
-                        <td id="protein">1</td>
-                        <td id="carbs">18</td>
-                        <td id="fat">1</td>
-                    </tr>
-
-                </tbody>
-            </table>
+        <div class="cards">
+            <div class="inner-card">
+                <div class="card-front">
+                    <img src="../images/water.jpg">
+                    <h4><b>Water</b></h4>
+                </div>
+                <div class="card-back">
+                    <p>kcal/100g: <span class="kcal">0</span></p>
+                    <p>protein/100g: <span class="protein">0</span></p>
+                    <p>carbs/100g: <span class="carbs">0</span></p>
+                    <p>fat/100g: <span class="fats">0</span></p>
+                    <button class="btnAdd">Add</button>
+                </div>
+            </div>
         </div>
 
-        <div class="col-6 col-md-4" id="counter">
-            <h1>Count your food</h1>
-            <form method="POST" action=""></form>
-            <table class="table table-striped" id="tableCount">
-                <thead>
-                    <tr class="info">
-                        <th class="info" data-colname="name" data-order="desc">Name</th>
-                        <th data-colname="kcal" data-order="desc">Kcal/100g</th>
-                        <th data-colname="protein" data-order="desc">Protein</th>
-                        <th data-colname="carbs" data-order="desc">Carbs</th>
-                        <th data-colname="fat" data-order="desc">Fat</th>
-                    </tr>
-                </thead>
-                <tbody>
+        <div class="cards">
+            <div class="inner-card">
+                <div class="card-front">
+                    <img src="../images/water.jpg">
+                    <h4><b>Chicken</b></h4>
+                </div>
+                <div class="card-back">
+                    <p>kcal/100g: <span class="kcal">246</span></p>
+                    <p>protein/100g: <span class="protein">30</span></p>
+                    <p>carbs/100g: <span class="carbs">1,8</span></p>
+                    <p>fat/100g: <span class="fats">12</span></p>
+                    <button class="btnAdd">Add</button>
+                </div>
+            </div>
+        </div>
 
-                </tbody>
+        <div class="cards">
+            <div class="inner-card">
+                <div class="card-front">
+                    <img src="../images/water.jpg">
+                    <h4><b>Rice</b></h4>
+                </div>
+                <div class="card-back">
+                    <p>kcal/100g: <span class="kcal">130</span></p>
+                    <p>protein/100g: <span class="protein">2,7</span></p>
+                    <p>carbs/100g: <span class="carbs">28</span></p>
+                    <p>fat/100g: <span class="fats">0,3</span></p>
+                    <button class="btnAdd">Add</button>
+                </div>
+            </div>
+        </div>
 
-
+        <div class="cards">
+            <div class="inner-card">
+                <div class="card-front">
+                    <img src="../images/water.jpg">
+                    <h4><b>Sauce</b></h4>
+                </div>
+                <div class="card-back">
+                    <p>kcal/100g: <span class="kcal">78</span></p>
+                    <p>protein/100g: <span class="protein">1</span></p>
+                    <p>carbs/100g: <span class="carbs">18</span></p>
+                    <p>fat/100g: <span class="fats">1</span></p>
+                    <button class="btnAdd">Add</button>
+                </div>
+            </div>
         </div>
         
+        <div class="cards">
+            <div class="inner-card">
+                <div class="card-front">
+                    <img src="../images/water.jpg">
+                    <h4><b>Water</b></h4>
+                </div>
+                <div class="card-back">
+                    <p>kcal/100g: <span class="kcal">0</span></p>
+                    <p>protein/100g: <span class="protein">0</span></p>
+                    <p>carbs/100g: <span class="carbs">0</span></p>
+                    <p>fat/100g: <span class="fats">0</span></p>
+                    <button class="btnAdd">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="inner-card">
+                <div class="card-front">
+                    <img src="../images/water.jpg">
+                    <h4><b>Water</b></h4>
+                </div>
+                <div class="card-back">
+                    <p>kcal/100g: <span class="kcal">0</span></p>
+                    <p>protein/100g: <span class="protein">0</span></p>
+                    <p>carbs/100g: <span class="carbs">0</span></p>
+                    <p>fat/100g: <span class="fats">0</span></p>
+                    <button class="btnAdd">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="inner-card">
+                <div class="card-front">
+                    <img src="../images/water.jpg">
+                    <h4><b>Water</b></h4>
+                </div>
+                <div class="card-back">
+                    <p>kcal/100g: <span class="kcal">0</span></p>
+                    <p>protein/100g: <span class="protein">0</span></p>
+                    <p>carbs/100g: <span class="carbs">0</span></p>
+                    <p>fat/100g: <span class="fats">0</span></p>
+                    <button class="btnAdd">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="inner-card">
+                <div class="card-front">
+                    <img src="../images/water.jpg">
+                    <h4><b>Water</b></h4>
+                </div>
+                <div class="card-back">
+                    <p>kcal/100g: <span class="kcal">0</span></p>
+                    <p>protein/100g: <span class="protein">0</span></p>
+                    <p>carbs/100g: <span class="carbs">0</span></p>
+                    <p>fat/100g: <span class="fats">0</span></p>
+                    <button class="btnAdd">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="inner-card">
+                <div class="card-front">
+                    <img src="../images/water.jpg">
+                    <h4><b>Water</b></h4>
+                </div>
+                <div class="card-back">
+                    <p>kcal/100g: <span class="kcal">0</span></p>
+                    <p>protein/100g: <span class="protein">0</span></p>
+                    <p>carbs/100g: <span class="carbs">0</span></p>
+                    <p>fat/100g: <span class="fats">0</span></p>
+                    <button class="btnAdd">Add</button>
+                </div>
+            </div>
+        </div>
+
+        
+
     </div>
-
-
-    <h1>PODLICZANIE MAKRO, USUWANIE Z DRUGIEJ TABELI, KOLOROWANIE</h1> 
 
 </body>
 

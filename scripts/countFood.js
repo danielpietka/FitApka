@@ -1,5 +1,5 @@
 
-const searchFun = () =>{
+/*const searchFunTable = () =>{
     let filter = document.getElementById('searchInput').value.toUpperCase();
     let myTable = document.getElementById('tableList');
     let tr = myTable.getElementsByTagName('tr');
@@ -18,6 +18,31 @@ const searchFun = () =>{
         }
     }
 }
+*/
+
+const searchFunElements = () =>{
+    var input = document.getElementById("searchInput")
+    input.addEventListener("input", myFunction);
+
+    function myFunction(e){
+        var filter = e.target.value.toUpperCase();
+
+        var list = document.getElementById("foodCards");
+        var divs = list.getElementsByClassName("cards");
+
+        for(var i = 0; i < divs.length; i++){
+            var a = divs[i].getElementsByTagName("b")[0];
+
+            if(a){
+                if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
+                    divs[i].style.display = "";
+                }else {
+                    divs[i].style.display = "none";
+                }
+            }
+        }
+    }
+}
 
 $(window).ready(function(){
     var items = [];
@@ -26,7 +51,7 @@ $(window).ready(function(){
         var newTr = $(this).closest("tr").clone();
         items.push(newTr);
         newTr.appendTo($("#tableCount"));
-
+        console.log(tableCount);
     });
     
     // $("#tableCount tbody tr").on("click", function() {
