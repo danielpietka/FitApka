@@ -20,6 +20,7 @@
 }
 */
 
+//filter elements
 const searchFunElements = () =>{
     var input = document.getElementById("searchInput")
     input.addEventListener("input", myFunction);
@@ -44,7 +45,7 @@ const searchFunElements = () =>{
     }
 }
 
-$(window).ready(function(){
+/*$(window).ready(function(){
     var items = [];
 
     $("#tableList tbody tr").on("click", function() {
@@ -59,5 +60,43 @@ $(window).ready(function(){
     // });
 
     
-});
+});*/
 
+const addButton = () => {
+    var name = document.getElementById('name').innerHTML;
+    var kcal = parseFloat($("#kcal").text(), 10);
+    var protein = parseFloat($("#protein").text(), 10);
+    var carbs = parseFloat($("#carbs").text(), 10);
+    var fat = parseFloat($("#fat").text(), 10);
+
+    var rowCnt = foodTable.rows.length;    // get the number of rows.
+        var tr = foodTable.insertRow(rowCnt); // table row.
+        tr = foodTable.insertRow(rowCnt);
+    
+    for(var i = 0; i < 6; i++){
+        var td = document.createElement('td');
+        td = tr.insertCell(i);
+
+        if(i == 0){
+            //add remove button
+            var button = document.createElement('input');
+            button.setAttribute('type', 'button');
+            button.setAttribute('value', 'Remove');
+            button.setAttribute('onclick', 'removeRow(this)');
+            td.appendChild(button);
+        }else{
+            var ele = document.createElement('td')
+            switch(i){
+                case 1:
+                    var nameText = name.;
+                    td.appendChild(nameText);
+            }
+        }
+    }
+
+    console.log(kcal +" "+ protein +" "+ carbs +" " + fat + " " + name);
+}
+
+const removeRow = () => {
+    return 0;
+}

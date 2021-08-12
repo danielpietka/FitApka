@@ -40,21 +40,38 @@
             </div>
         </div>
     </div>
-    
+    https://www.encodedna.com/javascript/dynamically-add-remove-rows-to-html-table-using-javascript-and-save-data.htm
+    <div class="divFoodTable">
+        <table id="foodTable" style="width: 80%">
+            <thead>
+                <tr>
+                    <th>REMOVE BUTTON</th>
+                    <th>Name</th>
+                    <th>Kcal</th>
+                    <th>Protein</th>
+                    <th>Carbs</th>
+                    <th>Fat</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
     <div class="foodCards" id="foodCards">
 
         <div class="cards">
             <div class="inner-card">
                 <div class="card-front">
                     <img src="../images/water.jpg">
-                    <h4><b>Water</b></h4>
+                    <h4 ><b id="name">Water</b></h4>
                 </div>
                 <div class="card-back">
-                    <p>kcal/100g: <span class="kcal">0</span></p>
-                    <p>protein/100g: <span class="protein">0</span></p>
-                    <p>carbs/100g: <span class="carbs">0</span></p>
-                    <p>fat/100g: <span class="fats">0</span></p>
-                    <button class="btnAdd">Add</button>
+                    <p>kcal/100g: <span id="kcal">0</span></p>
+                    <p>protein/100g: <span id="protein">0</span></p>
+                    <p>carbs/100g: <span id="carbs">0</span></p>
+                    <p>fat/100g: <span id="fat">0</span></p>
+                    <button class="btnAdd" onclick="addButton()">Add</button>
                 </div>
             </div>
         </div>
