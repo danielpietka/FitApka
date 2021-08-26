@@ -1,7 +1,7 @@
 
-/*const searchFunTable = () =>{
+const searchFunTable = () =>{
     let filter = document.getElementById('searchInput').value.toUpperCase();
-    let myTable = document.getElementById('tableList');
+    let myTable = document.getElementById('foodTable');
     let tr = myTable.getElementsByTagName('tr');
 
     for(var i = 0; i < tr.length; i++){
@@ -18,85 +18,32 @@
         }
     }
 }
-*/
 
-//filter elements
-const searchFunElements = () =>{
-    var input = document.getElementById("searchInput")
-    input.addEventListener("input", myFunction);
+/*function addBtn(){
+    var foodTable = document.getElementById("foodTable");
+    var dietTable = document.getElementById("dietTable");
+    var row = dietTable.insertRow(0);
 
-    function myFunction(e){
-        var filter = e.target.value.toUpperCase();
+    var name = row.insertCell(0);
+    var kcal = row.insertCell(1);
+    var prot = row.insertCell(2);
+    var carb = row.insertCell(3);
+    var fat = row.insertCell(4);
+    var removeButton = row.insertCell(5);
+}*/
 
-        var list = document.getElementById("foodCards");
-        var divs = list.getElementsByClassName("cards");
-
-        for(var i = 0; i < divs.length; i++){
-            var a = divs[i].getElementsByTagName("b")[0];
-
-            if(a){
-                if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
-                    divs[i].style.display = "";
-                }else {
-                    divs[i].style.display = "none";
-                }
-            }
-        }
-    }
-}
-
-/*$(window).ready(function(){
+$(document).ready(function(){
     var items = [];
-
-    $("#tableList tbody tr").on("click", function() {
+    $("#foodTable tr").on("click", function(){
         var newTr = $(this).closest("tr").clone();
+        removeButton = "<input type='button' value='Delete' class='deleteBtn'/>";
+        
+        $(".deleteBtn").click(function() {
+            $(this).closest("tr").remove();
+          });
+
+        $(newTr).children("td:last").html("").html(removeButton);
         items.push(newTr);
-        newTr.appendTo($("#tableCount"));
-        console.log(tableCount);
+        newTr.appendTo($("#dietTable"));
     });
-    
-    // $("#tableCount tbody tr").on("click", function() {
-    //     $(this).closest("tr").remove();
-    // });
-
-    
-});*/
-
-const addButton = () => {
-    var name = document.getElementById('name').innerHTML;
-    var kcal = parseFloat($("#kcal").text(), 10);
-    var protein = parseFloat($("#protein").text(), 10);
-    var carbs = parseFloat($("#carbs").text(), 10);
-    var fat = parseFloat($("#fat").text(), 10);
-
-    var rowCnt = foodTable.rows.length;    // get the number of rows.
-        var tr = foodTable.insertRow(rowCnt); // table row.
-        tr = foodTable.insertRow(rowCnt);
-    
-    for(var i = 0; i < 6; i++){
-        var td = document.createElement('td');
-        td = tr.insertCell(i);
-
-        if(i == 0){
-            //add remove button
-            var button = document.createElement('input');
-            button.setAttribute('type', 'button');
-            button.setAttribute('value', 'Remove');
-            button.setAttribute('onclick', 'removeRow(this)');
-            td.appendChild(button);
-        }else{
-            var ele = document.createElement('td')
-            switch(i){
-                case 1:
-                    var nameText = name.;
-                    td.appendChild(nameText);
-            }
-        }
-    }
-
-    console.log(kcal +" "+ protein +" "+ carbs +" " + fat + " " + name);
-}
-
-const removeRow = () => {
-    return 0;
-}
+})

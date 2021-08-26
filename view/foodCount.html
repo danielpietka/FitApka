@@ -36,178 +36,81 @@
         <div class="col">
             <div class="card card-body">
                 <input type="text" id="searchInput" placeholder="Type name.." class="form-control"
-                    onkeyup="searchFunElements()">
+                    onkeyup="searchFunTable()">
             </div>
         </div>
     </div>
-    https://www.encodedna.com/javascript/dynamically-add-remove-rows-to-html-table-using-javascript-and-save-data.htm
-    <div class="divFoodTable">
-        <table id="foodTable" style="width: 80%">
-            <thead>
-                <tr>
-                    <th>REMOVE BUTTON</th>
+
+
+
+    <div class="row">
+        <div class="col-8">
+            <table id="foodTable" style="width: 100%;">
+                <thead>
                     <th>Name</th>
-                    <th>Kcal</th>
-                    <th>Protein</th>
+                    <th>kcal/100g</th>
+                    <th>Proteins</th>
                     <th>Carbs</th>
                     <th>Fat</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
-    </div>
-    <div class="foodCards" id="foodCards">
-
-        <div class="cards">
-            <div class="inner-card">
-                <div class="card-front">
-                    <img src="../images/water.jpg">
-                    <h4 ><b id="name">Water</b></h4>
-                </div>
-                <div class="card-back">
-                    <p>kcal/100g: <span id="kcal">0</span></p>
-                    <p>protein/100g: <span id="protein">0</span></p>
-                    <p>carbs/100g: <span id="carbs">0</span></p>
-                    <p>fat/100g: <span id="fat">0</span></p>
-                    <button class="btnAdd" onclick="addButton()">Add</button>
-                </div>
-            </div>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Water</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Chicken</td>
+                        <td>246</td>
+                        <td>30</td>
+                        <td>1,8</td>
+                        <td>12</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Rice</td>
+                        <td>130</td>
+                        <td>2,7</td>
+                        <td>28</td>
+                        <td>0,3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Rice Sauce</td>
+                        <td>78</td>
+                        <td>1</td>
+                        <td>18</td>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <div class="cards">
-            <div class="inner-card">
-                <div class="card-front">
-                    <img src="../images/water.jpg">
-                    <h4><b>Chicken</b></h4>
-                </div>
-                <div class="card-back">
-                    <p>kcal/100g: <span class="kcal">246</span></p>
-                    <p>protein/100g: <span class="protein">30</span></p>
-                    <p>carbs/100g: <span class="carbs">1,8</span></p>
-                    <p>fat/100g: <span class="fats">12</span></p>
-                    <button class="btnAdd">Add</button>
-                </div>
-            </div>
-        </div>
 
-        <div class="cards">
-            <div class="inner-card">
-                <div class="card-front">
-                    <img src="../images/water.jpg">
-                    <h4><b>Rice</b></h4>
-                </div>
-                <div class="card-back">
-                    <p>kcal/100g: <span class="kcal">130</span></p>
-                    <p>protein/100g: <span class="protein">2,7</span></p>
-                    <p>carbs/100g: <span class="carbs">28</span></p>
-                    <p>fat/100g: <span class="fats">0,3</span></p>
-                    <button class="btnAdd">Add</button>
-                </div>
-            </div>
-        </div>
 
-        <div class="cards">
-            <div class="inner-card">
-                <div class="card-front">
-                    <img src="../images/water.jpg">
-                    <h4><b>Sauce</b></h4>
-                </div>
-                <div class="card-back">
-                    <p>kcal/100g: <span class="kcal">78</span></p>
-                    <p>protein/100g: <span class="protein">1</span></p>
-                    <p>carbs/100g: <span class="carbs">18</span></p>
-                    <p>fat/100g: <span class="fats">1</span></p>
-                    <button class="btnAdd">Add</button>
-                </div>
-            </div>
+        <div class="col-4">
+            <table id="dietTable" style="width: 100%;">
+                <thead>
+                    <th>Name</th>
+                    <th>kcal/100g</th>
+                    <th>Proteins</th>
+                    <th>Carbs</th>
+                    <th>Fat</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
         </div>
-        
-        <div class="cards">
-            <div class="inner-card">
-                <div class="card-front">
-                    <img src="../images/water.jpg">
-                    <h4><b>Water</b></h4>
-                </div>
-                <div class="card-back">
-                    <p>kcal/100g: <span class="kcal">0</span></p>
-                    <p>protein/100g: <span class="protein">0</span></p>
-                    <p>carbs/100g: <span class="carbs">0</span></p>
-                    <p>fat/100g: <span class="fats">0</span></p>
-                    <button class="btnAdd">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="cards">
-            <div class="inner-card">
-                <div class="card-front">
-                    <img src="../images/water.jpg">
-                    <h4><b>Water</b></h4>
-                </div>
-                <div class="card-back">
-                    <p>kcal/100g: <span class="kcal">0</span></p>
-                    <p>protein/100g: <span class="protein">0</span></p>
-                    <p>carbs/100g: <span class="carbs">0</span></p>
-                    <p>fat/100g: <span class="fats">0</span></p>
-                    <button class="btnAdd">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="cards">
-            <div class="inner-card">
-                <div class="card-front">
-                    <img src="../images/water.jpg">
-                    <h4><b>Water</b></h4>
-                </div>
-                <div class="card-back">
-                    <p>kcal/100g: <span class="kcal">0</span></p>
-                    <p>protein/100g: <span class="protein">0</span></p>
-                    <p>carbs/100g: <span class="carbs">0</span></p>
-                    <p>fat/100g: <span class="fats">0</span></p>
-                    <button class="btnAdd">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="cards">
-            <div class="inner-card">
-                <div class="card-front">
-                    <img src="../images/water.jpg">
-                    <h4><b>Water</b></h4>
-                </div>
-                <div class="card-back">
-                    <p>kcal/100g: <span class="kcal">0</span></p>
-                    <p>protein/100g: <span class="protein">0</span></p>
-                    <p>carbs/100g: <span class="carbs">0</span></p>
-                    <p>fat/100g: <span class="fats">0</span></p>
-                    <button class="btnAdd">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="cards">
-            <div class="inner-card">
-                <div class="card-front">
-                    <img src="../images/water.jpg">
-                    <h4><b>Water</b></h4>
-                </div>
-                <div class="card-back">
-                    <p>kcal/100g: <span class="kcal">0</span></p>
-                    <p>protein/100g: <span class="protein">0</span></p>
-                    <p>carbs/100g: <span class="carbs">0</span></p>
-                    <p>fat/100g: <span class="fats">0</span></p>
-                    <button class="btnAdd">Add</button>
-                </div>
-            </div>
-        </div>
-
-        
-
     </div>
 
+    
+    
 </body>
 
 </html>
