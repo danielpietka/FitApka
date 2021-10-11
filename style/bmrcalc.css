@@ -1,4 +1,46 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
+body{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    width: 100%;
+    text-align: right;
+    align-items: center;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.nav-links{
+    background-color:black;
+    width: 100%;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding:8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #8eb12c;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
 
 .calculator{
     min-height: 100vh;
@@ -8,7 +50,7 @@
     background-size:cover;
     
     position: fixed;
-    top: 0;
+    top: 80px;
     left: 0;
 }
 
