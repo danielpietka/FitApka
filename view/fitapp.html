@@ -1,101 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href = "../style/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Pacifico&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
-<script src="../scripts/script.js"></script>  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/mainTodo.css" />
+    <link rel="stylesheet" href="../style/weather.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+      integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+    />
+    <script src="../scripts/script.js"></script>
 
     <title>fitApp</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!--first page and nav-->
     <section class="header">
-        <nav>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Food</a></li>
-                    <li><a href="">Training</a></li>
-                    <li><a href="">About</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="text-box">
-            <h1>You must expect great things of yourself before you can do them.</h1>
-            <p>Michael Jordan</p>
+      <nav>
+        <div class="nav-links">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Fit</a></li>
+            <li><a href="">Other</a></li>
+            <li><a href="">About</a></li>
+          </ul>
         </div>
-    </section>
-    <section class="bmi">
-        <h1>Count your BMI</h1>
-        <p>Control your body weight with a BMI Calculator</p>
-        
-        <div class="row">
-            <div class="bmi-col">
-                <h3>About BMI</h3>
-                <p>Body Mass Index (BMI) is a value derived from the mass (weight) and height of a person. 
-                The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m2, 
-                resulting from mass in kilograms and height in metres.</p>
-            </div>
-            <div class="bmi-col">
-                <h3>Calculator BMI</h3>
-                <p>I wrote a BMI Calculator, so you can check a measure of body fat based on 
-                    height and weight that applies to adult men and women. </p>
-               
-            </div>
-            <div class="bmi-col">
-                <h3>Remember</h3>
-                <p>BMI shows the approximate body fat content. For some people, BMI may lead to wrong conclusions. 
-                    Moreover, it is not recommended to use the BMI to determine body weight for 
-                    children up to 14 years of age and for pregnant women.
-                </p>    
-            </div>
-        </div>
-        
+      </nav>
+      <div class="text-box">
+        <h1>
+          You must expect great things of yourself before you can do them.
+        </h1>
+      </div>
     </section>
 
+    <!--TODO-->
+    <section class="todo">
+      <header><h1>Todo List</h1></header>
+      <form>
+        <input type="text" class="todo-input" />
+        <button class="todo-button" type="submit">
+          <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="select">
+          <select name="todos" class="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+      </form>
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+      </div>
+    </section>
+    <script src="../scripts/todo.js"></script>
 
-    <section class="food">
-        <h1>Take care about your diet</h1>
-        <div class="row">
-            <div class="food-col">
-                <a href="calBalance.html"><img src="../images/bilans.jpeg"/></a>
-                
-                <a href="calBalance.html">
-                <div class="layer">
-                    <h3>Caloric Balance</h3>
-                </div></a>
-            </div>
-            <div class="food-col">
-                <a href=""><img src="../images/balance.jpg"></a>
+    <!-- weather-->
 
-                <a href="foodCount.html">
-                <div class="layer">
-                    <h3>Count your food</h3>
-                </div></a>
+    <section class="weather">
+      <div class="weather-box">
+        <header><i class="bx bx-left-arrow-alt"></i>Weather</header>
+        <div class="input-city">
+          <p class="info-txt"></p>
+          <input
+            type="text"
+            placeholder="City name"
+            spellcheck="false"
+            required
+          />
+          <div class="separator"></div>
+          <button>Get Device Location</button>
+        </div>
+
+        <div class="weather-part">
+            <img src="#" alt="weather icon"> 
+            <div class="temp">
+                <span class="numb">13</span>
+                <span class="deg">°</span>C
             </div>
-            <div class="food-col">
-                <a href=""><img src="../images/vegetables.jpg"></a>
-                <div class="layer">
-                    <h3>Food info</h3>
+            <div class="weather-wpart">Clouds</div>
+            <div class="location">
+                <i class="bx bx-map"></i>
+                <span>Warsaw, Poland</span>
+            </div>
+            <div class="bottom-details">
+
+                <div class="column feels">
+                    <i class="bx bxs-thermometer"></i>
+                    <div class="details">
+                        <div class="temp">
+                            <span class="numb-2">17</span>
+                            <span class="deg">°</span>C
+                        </div>
+                        <p>Feels like</p>
+                    </div>
+                </div>
+
+                <div class="column humidity">
+                    <i class="bx bxs-droplet-half"></i>
+                    <div class="details">
+                        <span>84%</span>
+                        <p>Humidity</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+      </div>
+      <script src="../scripts/weather.js"></script>
+    </section>
+
+    <section class="bmi">
+      <h1>Count your BMI</h1>
+      <p>Control your body weight with a BMI Calculator</p>
+
+      <div class="row">
+        <div class="bmi-col">
+          <h3>About BMI</h3>
+          <p>
+            Body Mass Index (BMI) is a value derived from the mass (weight) and
+            height of a person. The BMI is defined as the body mass divided by
+            the square of the body height, and is expressed in units of kg/m2,
+            resulting from mass in kilograms and height in metres.
+          </p>
+        </div>
+        <div class="bmi-col">
+          <h3>Calculator BMI</h3>
+          <p>
+            I wrote a BMI Calculator, so you can check a measure of body fat
+            based on height and weight that applies to adult men and women.
+          </p>
+        </div>
+        <div class="bmi-col">
+          <h3>Remember</h3>
+          <p>
+            BMI shows the approximate body fat content. For some people, BMI may
+            lead to wrong conclusions. Moreover, it is not recommended to use
+            the BMI to determine body weight for children up to 14 years of age
+            and for pregnant women.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="food">
+      <h1>Take care about your diet</h1>
+      <div class="row">
+        <div class="food-col">
+          <a href="calBalance.html"><img src="../images/bilans.jpeg" /></a>
+
+          <a href="calBalance.html">
+            <div class="layer">
+              <h3>Caloric Balance</h3>
+            </div></a
+          >
+        </div>
+        <div class="food-col">
+          <a href=""><img src="../images/balance.jpg" /></a>
+
+          <a href="foodCount.html">
+            <div class="layer">
+              <h3>Count your food</h3>
+            </div></a
+          >
+        </div>
+        <div class="food-col">
+          <a href=""><img src="../images/vegetables.jpg" /></a>
+          <div class="layer">
+            <h3>Food info</h3>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="footer">
-        <h4>About me</h4>
-        <p>My name is Daniel Piętka, I'm 22 and an IT student. I am constantly working on improving my programming skills. Contact me!</p>
+      <h4>About me</h4>
+      <p>
+        My name is Daniel Piętka, I'm 22 and an IT student. I am constantly
+        working on improving my programming skills. Contact me!
+      </p>
 
-        <div class="icons">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-instagram"></i>
-        </div>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
     </section>
-</body>
+  </body>
 </html>
