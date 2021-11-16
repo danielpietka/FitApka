@@ -15,3 +15,7 @@ function calcBMR(){
     document.getElementById('score').value = Math.floor(bmr);
     //alert(bmr);
 }
+
+//smooth scroll
+
+

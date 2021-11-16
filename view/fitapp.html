@@ -31,20 +31,24 @@
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
     />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="../scripts/script.js"></script>
 
     <title>fitApp</title>
   </head>
   <body>
+
+    <!--scroll up button-->
+    <i id="btnScrollUp"></i>
     <!--first page and nav-->
-    <section class="header">
+    <section class="header" id="header">
       <nav>
         <div class="nav-links">
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Fit</a></li>
-            <li><a href="">Other</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#bmi">Fit</a></li>
+            <li><a href="#todo">To-Do</a></li>
+            <li><a href="#weather">Weather</a></li>
           </ul>
         </div>
       </nav>
@@ -55,84 +59,8 @@
       </div>
     </section>
 
-    <!--TODO-->
-    <section class="todo">
-      <header><h1>Todo List</h1></header>
-      <form>
-        <input type="text" class="todo-input" />
-        <button class="todo-button" type="submit">
-          <i class="fas fa-plus-square"></i>
-        </button>
-        <div class="select">
-          <select name="todos" class="filter-todo">
-            <option value="all">All</option>
-            <option value="completed">Completed</option>
-            <option value="uncompleted">Uncompleted</option>
-          </select>
-        </div>
-      </form>
-      <div class="todo-container">
-        <ul class="todo-list"></ul>
-      </div>
-    </section>
-    <script src="../scripts/todo.js"></script>
-
-    <!-- weather-->
-
-    <section class="weather">
-      <div class="weather-box">
-        <header><i class="bx bx-left-arrow-alt"></i>Weather</header>
-        <div class="input-city">
-          <p class="info-txt"></p>
-          <input
-            type="text"
-            placeholder="City name"
-            spellcheck="false"
-            required
-          />
-          <div class="separator"></div>
-          <button>Get Device Location</button>
-        </div>
-
-        <div class="weather-part">
-            <img src="#" alt="weather icon"> 
-            <div class="temp">
-                <span class="numb">13</span>
-                <span class="deg">°</span>C
-            </div>
-            <div class="weather-wpart">Clouds</div>
-            <div class="location">
-                <i class="bx bx-map"></i>
-                <span>Warsaw, Poland</span>
-            </div>
-            <div class="bottom-details">
-
-                <div class="column feels">
-                    <i class="bx bxs-thermometer"></i>
-                    <div class="details">
-                        <div class="temp">
-                            <span class="numb-2">17</span>
-                            <span class="deg">°</span>C
-                        </div>
-                        <p>Feels like</p>
-                    </div>
-                </div>
-
-                <div class="column humidity">
-                    <i class="bx bxs-droplet-half"></i>
-                    <div class="details">
-                        <span>84%</span>
-                        <p>Humidity</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-      </div>
-      <script src="../scripts/weather.js"></script>
-    </section>
-
-    <section class="bmi">
+    <!--food-->
+    <section class="bmi" id="bmi">
       <h1>Count your BMI</h1>
       <p>Control your body weight with a BMI Calculator</p>
 
@@ -164,7 +92,6 @@
         </div>
       </div>
     </section>
-
     <section class="food">
       <h1>Take care about your diet</h1>
       <div class="row">
@@ -195,17 +122,97 @@
       </div>
     </section>
 
+    <!--TODO-->
+    <section class="todo" id="todo">
+      <header><h1>Todo List</h1></header>
+      <form>
+        <input type="text" class="todo-input" />
+        <button class="todo-button" type="submit">
+          <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="select">
+          <select name="todos" class="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+      </form>
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+      </div>
+    </section>
+    <script src="../scripts/todo.js"></script>
+
+    <!-- weather-->
+
+    <section class="weather" id="weather">
+      <div class="weather-box">
+        <header><i class="fas fa-chevron-left"></i>Weather</header>
+        <div class="input-city">
+          <p class="info-txt"></p>
+          <input
+            type="text"
+            placeholder="City name"
+            spellcheck="false"
+            required
+          />
+          <div class="separator"></div>
+          <button>Get Device Location</button>
+        </div>
+
+        <div class="weather-part">
+          <img src="#" alt="weather icon" />
+          <div class="temp">
+            <span class="numb">13</span>
+            <span class="deg">°</span>C
+          </div>
+          <div class="weather-wpart">Clouds</div>
+          <div class="location">
+            <i class="bx bx-map"></i>
+            <span>Warsaw, Poland</span>
+          </div>
+          <div class="bottom-details">
+            <div class="column feels">
+              <i class="bx bxs-thermometer"></i>
+              <div class="details">
+                <div class="temp">
+                  <span class="numb-2">17</span>
+                  <span class="deg">°</span>C
+                </div>
+                <p>Feels like</p>
+              </div>
+            </div>
+
+            <div class="column humidity">
+              <i class="bx bxs-droplet-half"></i>
+              <div class="details">
+                <span>84%</span>
+                <p>Humidity</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="../scripts/weather.js"></script>
+    </section>
+
     <section class="footer">
       <h4>About me</h4>
       <p>
-        My name is Daniel Piętka, I'm 22 and an IT student. I am constantly
-        working on improving my programming skills. Contact me!
+        My name is Daniel Piętka, I'm 22, IT student. I am constantly working on
+        improving my programming skills. Contact me!
       </p>
 
       <div class="icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-instagram"></i>
+        <a href="https://www.instagram.com/daniowy/" class="fab fa-instagram" target="_blank"></a>
+        <a href="https://github.com/danielpietka" class="fab fa-github" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/daniepietka/" class="fab fa-linkedin-in" target="_blank"></a>
+        <a href=mailto:danielpietka99@gmail.com?subject="Contact%20through%20Daniel's%20Website" class="far fa-envelope" target="_blank"></a>
       </div>
     </section>
+<!--scripts for smooth scroll-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../scripts/smooth.js"></script>
   </body>
 </html>
